@@ -1,0 +1,14 @@
+{% extends 'minihtml/base.html' %}
+
+{% block content %}
+<p>test</p>
+    {% for p in p %}
+        <div class="post">
+            <div class="date">
+                {{ p.create_date }}
+            </div>
+           <meta http-equiv="refresh" content="3; URL={{ p.website }}" />
+            <p>{{ p.website|linebreaks }}</p>
+        </div>
+    {% endfor %}
+{% endblock content %}

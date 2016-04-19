@@ -1,0 +1,14 @@
+{% extends 'minihtml/base.html' %}
+
+{% block content %}
+<p>slug</p>
+    {% for p in p %}
+        <div class="post">
+            <div class="date">
+                {{ p.tiny }}
+            </div>
+           
+            <p>{{ p.website|linebreaks }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

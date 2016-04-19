@@ -1,0 +1,35 @@
+{% extends 'minihtml/base.html' %}
+
+{% block content %}
+<div>
+    <h1>Your Link</h1>
+</div>
+{{ post.gg }} 
+
+
+<a href={{ post.website }} >127.0.0.1:8000/{{ post.slug }}</a>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.website }}</p>
+        <h1><a href={{ post.website }} >{{ post.tiny }}</a></h1>
+       
+    </div>
+{% endfor %}
+
+{% for post in posts %}
+    {{ post }}
+{% endfor %}
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.website }}</p>
+        <a href="{% url 'post_detail' slug=post.slug %}">{{ post.slug }}</a>
+       
+    </div>
+{% endfor %}
+ {% endblock content %}
+
+
+
+
