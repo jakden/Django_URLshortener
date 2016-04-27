@@ -1,15 +1,14 @@
 {% extends 'minihtml/base.html' %}
 
 {% block content %}
-    <h1>Make you link iti</h1>
+    <h1>Shrink your link</h1>
     	<table>
     		<td>
     			<form method="POST" class="post-form">{% csrf_token %}
         		{{ form.as_p }}
-        	</td>
-			<td>        
-     			<button type="submit" class="save btn btn-default">Create</button>
+        	       
+     			<button type="submit" class="create">shrink</button>
     		</td>	
     			</form>	
-    	<table/>
+    	</table>
 {% endblock %}
